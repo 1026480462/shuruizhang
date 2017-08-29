@@ -72,9 +72,13 @@ bug都特别揪心，但是必须要解决，因为这是你的经验。在遇�
 							<h3 class="companty-name">北京广视通达数字网络科技有限公司</h3>
 							<span class="work-time">2016-01 ---至今</span>
 							<div class="work-text">
-								<p>独立开发公司DSP，SSP系统页面，熟练应用bootstrap框架搭建前台
-框架并且完成快速开发前台页面和组件。并且在与开发人员配合中完成
-bug的修复。
+								<p>1.独立完成公司ssp，dsp系统的前台框架，负责前台页面的开发，js开发，应用的框架主要有jquery，bootstrap快速搭建前台架构，主要应用组件echarts实现数据可视化开发，bootstrapFileinput实现图片和视频上传，bootstrap-select和bootstrapDatetime，并且与后端积极配合修改bug.
+								</p>
+								<p> 
+								2.在随后的工作中进一步积极学习新知识vue框架，并且用vue-cli搭建nodeJs服务器，应用到nodeJs，npm ，webpack，vue-cli，element-ui，vue-router并且应用所学积极参与到公司新项目云联讯管理系统，负责部分页面的开发和接口定义，并且用easy-mock调试接口，实现前后端分离。
+								</p>
+								<p> 
+								3.单独开发页面sdk，获取客户端信息，客户端平台，浏览器，页面参数，点击操作，移动端地理位置，型号，品牌。
 								</p>
 							</div>
 						</div>
@@ -84,12 +88,11 @@ bug的修复。
 							<a href="javascript:;" class="companty-logo">
 								<img src="imgs/logo-1.png" >
 							</a>
-							<h3 class="companty-name">北京广视通达数字网络科技有限公司</h3>
-							<span class="work-time">2016-01 ---至今</span>
+							<h3 class="companty-name">长春科图科技</h3>
+							<span class="work-time">2014-01 --- 2015-12</span>
 							<div class="work-text">
-								<p>独立开发公司DSP，SSP系统页面，熟练应用bootstrap框架搭建前台
-框架并且完成快速开发前台页面和组件。并且在与开发人员配合中完成
-bug的修复。
+								<p>就职于吉林省科图科技软件公司，岗位是前端开发，负责长春市计量软件前端开发，主要应用html，css和jq。应用百度ueditor插件实现制作证书模板功能，文本特殊符号插入。计算工具，应用layer插件实现弹出框显示信息，包括前后台交互。后台java开发，实现页面增删改查功能。Orcal数据库建表、增删改查。单独编写吉林省省计量院官网前端和微信平台页面前端开发，官网页面，微信平台页面应用css3实现图片滑动，并且应用html5和css3编写页面。
+熟悉html5和css3并且能实现应用，jq可以手动编写，并且熟练应用ajax交互。
 								</p>
 							</div>
 						</div>
@@ -99,8 +102,17 @@ bug的修复。
 		</div>
 		<div class="screen screen-4">
 			<h4 class="skill">技术知识<em>technical knowledge</em></h4>
-			<div>
-				<div></div>
+			<div class="clearfix skill-wrap">
+				<div id="option0" style="width:200px;height:200px;"></div>
+				<div id="option1" style="width:200px;height:200px;"></div>
+				<div id="option2" style="width:200px;height:200px;"></div>
+				<div id="option3" style="width:200px;height:200px;"></div>
+			</div>
+			<div class="clearfix skill-wrap">
+				<div id="option4" style="width:200px;height:200px;"></div>
+				<div id="option5" style="width:200px;height:200px;"></div>
+				<div id="option6" style="width:200px;height:200px;"></div>
+				<div id="option7" style="width:200px;height:200px;"></div>
 			</div>
 		</div>
 		
@@ -115,6 +127,57 @@ bug的修复。
 <script type="text/javascript" src="js/style.js"></script>
 <script type="text/javascript" src="js/echarts.min.js"></script>
 <script type="text/javascript">
-	init.start();
+init.start();
+var arrs=[
+	{name:'HTML(5)',data:85,data2:15,},
+	{name:'CSS(3)',data:85,data2:15,},
+	{name:'PS',data:85,data2:15,},
+	{name:'JS(6)',data:85,data2:15,},
+	{name:'Jquery',data:85,data2:15,},
+	{name:'VUE',data:85,data2:15,},
+	{name:'bootstrap',data:85,data2:15,},
+	{name:'Jquery',data:85,data2:15,}
+]
+for(var i=0;i<arrs.length;i++){
+	option = {
+	    legend: {
+	        orient: 'vertical',
+	        x: 'left',
+	    },
+	    series: [
+	        {
+	            name:'HTML',
+	            type:'pie',
+	            radius: ['50%', '70%'],
+	            avoidLabelOverlap: false,
+	            label: {
+	                normal: {
+	                    show: false,
+	                    position: 'center'
+	                },
+	                emphasis: {
+	                    show: true,
+	                    textStyle: {
+	                        fontSize: '20',
+	                        fontWeight: 'bold'
+	                    }
+	                }
+	            },
+	            labelLine: {
+	                normal: {
+	                    show: false
+	                }
+	            },
+	            data:[
+	                {value:arrs[i].data, name:arrs[i].name},
+	                {value:arrs[i].data2}
+	            ]
+	        }
+	    ]
+	};
+	var myChart = echarts.init(document.getElementById('option'+i));
+	myChart.setOption(option);
+}
+
 </script>
 </html>

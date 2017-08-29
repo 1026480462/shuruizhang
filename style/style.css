@@ -225,9 +225,15 @@ h1 em{
 	text-align: center;
 	font-size: 48px;
 	color: #333;
-	padding-top: 80px;
+	padding-top: 30px;
 }
 .skill em{
 	display: block;
 	font-size: 20px;
+}
+.skill-wrap{
+	text-align: center;
+}
+.skill-wrap > div{
+	display: inline-block;
 }
