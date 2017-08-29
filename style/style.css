@@ -234,6 +234,6 @@ h1 em{
 .skill-wrap{
 	text-align: center;
 }
-.skill-wrap > div{
+.skill-wrap  div{
 	display: inline-block;
 }
